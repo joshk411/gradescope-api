@@ -28,7 +28,7 @@ class GSAssignment():
             resp = self.course.session.get('https://www.gradescope.com' + sub_path + '.json')
             resp_data = resp.json()
             for test in resp_data['results']['tests']:
-                if (test['name'] == 'A00-smoke.lua'):       # Initial testing with SFS fields
+                if (test['name'] == 'explosion'):       # Initial testing with SFS fields
                     current_explosion = test['score']
 
             # The current explosion score (negative) should always be more negative or equal
